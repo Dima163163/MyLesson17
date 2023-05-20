@@ -4,9 +4,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>MyLesson17</title>
   </head>
   <body>
+    <form action="#" id="worker_form" class="worker_form">
+      <label for="surname">
+        Ваше фамилия:
+        <input
+          type="text"
+          name="surname"
+          id="last_name"
+          class="last_name_input"
+          required
+        />
+      </label>
+      <label for="name">
+        Ваше имя:
+        <input
+          type="text"
+          name="name"
+          id="first_name"
+          class="first_name_input"
+          required
+        />
+      </label>
+      <label for="age">
+        Ваш возраст:
+        <input type="number" name="age" id="age" class="age_input" required />
+      </label>
+      <label for="childrens" class="childeren_label">
+        Есть ли у вас дети:
+        <input
+          type="checkbox"
+          name="childrens"
+          class="checkbox_input"
+          id="has_children"
+        />
+      </label>
+      <label class="skill_label" class="skill_label">
+        Список ваших навыков
+        <div class="skills-block">
+          <input type="text" name="skill" id="skill" required />
+        </div>
+      </label>
+
+      <button type="button" id="add_skill" class="btn_skills">+</button>
+      <div class="work">
+        <p>Место работы</p>
+        <select name="work" id="work_select" class="work_select">
+          <option value="Водитель">Водитель</option>
+          <option value="Механик">Механик</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn_save">Сохранить</button>
+    </form>
+
+    <table id="worker-table" class="worker_table">
+      <thead>
+        <tr>
+          <th class="worker_column">Имя</th>
+          <th class="worker_column">Фамилия</th>
+          <th class="worker_column">Наличие детей</th>
+          <th class="worker_column">Возраст</th>
+          <th class="worker_column">Навыки</th>
+          <th class="worker_column">Место работы</th>
+          <th class="worker_column">Действие</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
     <script src="/script.js"></script>
+    <style>
+      input:invalid:required {
+        background-color: rgba(224, 117, 117, 0.55);
+      }
+    </style>
   </body>
 </html>
